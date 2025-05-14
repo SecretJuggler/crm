@@ -16,6 +16,7 @@ Example for Apache: point a VirtualHost to the project’s public directory.
 
 Create a temp file in the public directory and paste the following script inside it and then run it.
 ///////////////////////////////////////////////////////////////////////////////////
+```php
 <?php 
 require 'index.php';
 
