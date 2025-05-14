@@ -49,7 +49,7 @@ $db->query("INSERT INTO users (first_name, last_name, email, password) VALUES(:f
     'email' => 'admin@admin.com',
     'password' => password_hash('password', PASSWORD_BCRYPT),
 ]); 
-
+```
 The script will create the users table and an admin user.
 You will log into the system with the following credentials
 admin@admin.com
