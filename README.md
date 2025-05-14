@@ -14,8 +14,10 @@ Make sure the project folder is accessible via your local server.
 
 Example for Apache: point a VirtualHost to the project’s public directory.
 
+### Create a temporary PHP setup file
+
 Create a temp file in the public directory and paste the following script inside it and then run it.
-///////////////////////////////////////////////////////////////////////////////////
+
 ```php
 <?php 
 require 'index.php';
@@ -52,7 +54,8 @@ $db->query("INSERT INTO users (first_name, last_name, email, password) VALUES(:f
 ```
 The script will create the users table and an admin user.
 You will log into the system with the following credentials
-admin@admin.com
-password
 
-This will then request you to change your password :)
+email: admin@admin.com
+password: password
+
+When you log in for the first time it will request you to change the password :)
