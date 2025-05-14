@@ -1,5 +1,7 @@
 <?php 
 
+namespace Core\Enums;
+
 class StatusCodes
 {
     const NOT_FOUND = 404;

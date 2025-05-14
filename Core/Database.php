@@ -29,6 +29,13 @@ class Database
         return $this;
     }
 
+    public function exec($query)
+    {
+        $this->connection->exec($query);
+
+        return $this;
+    }
+
     public function find()
     {
         return $this->stmt->fetch();
@@ -48,5 +55,10 @@ class Database
     public function get()
     {
         return $this->stmt->fetchAll();
+    }
+
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
     }
 }

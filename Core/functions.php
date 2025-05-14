@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use Core\Enums\StatusCodes;
 
 function dd($value)
 {
