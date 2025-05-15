@@ -20,6 +20,16 @@ Create a temp file in the public directory and paste the following script inside
 
 ```php
 <?php 
+
+if (isset($_GET['delete'])) {
+    if (unlink(__FILE__)) {
+        echo "setup.php deleted. <br />";
+    } else {
+        echo "Could not delete setup.php. Please delete manually. <br />";
+    }
+    exit;
+}
+
 require 'index.php';
 
 use Core\App;
@@ -47,11 +57,18 @@ $db->query("INSERT INTO users (first_name, last_name, email, password) VALUES(:f
     'email' => 'admin@admin.com',
     'password' => password_hash('password', PASSWORD_BCRYPT),
 ]); 
+echo "User created <br />";
+echo "Email: admin@admin.com <br />";
+echo "Password: password <br />";
+
+echo "<br><a href='?delete=1'>Click here to delete setup.php</a>";
+
 ```
 The script will create the users table and an admin user.
 You will log into the system with the following credentials
 
-email: admin@admin.com
-password: password
+email: <b>admin@admin.com</b>
+password: <b>password</b>
 
 When you log in for the first time it will request you to change the password :)
+please delete the file manually if the script was unable to delete the file.
